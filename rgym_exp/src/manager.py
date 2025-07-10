@@ -103,8 +103,8 @@ class SwarmGameManager(BaseGameManager, DefaultGameManagerMixin):
         get_logger().info(f"bootnodes: {kwargs.get('bootnodes', [])}")
         get_logger().info(f"Using Model: {self.trainer.model.config.name_or_path}")
 
-        with open(os.path.join(log_dir, f"system_info.txt"), "w") as f:
-            f.write(get_system_info())
+        #with open(os.path.join(log_dir, f"system_info.txt"), "w") as f:
+        #    f.write(get_system_info())
 
     def _get_total_rewards_by_agent(self):
         rewards_by_agent = defaultdict(int)
