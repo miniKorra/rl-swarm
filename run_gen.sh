@@ -1,5 +1,3 @@
-# chmod +x *.sh
-
 # 1. copy: gen.sh -> ~/gen.sh
 cp gen.sh ~/gen.sh
 sed -i "s/{vps_no}/$vps_no/g" ~/gen.sh
