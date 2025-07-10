@@ -1,6 +1,7 @@
 # 1. copy: gen.sh -> ~/gen.sh
 cp gen.sh ~/gen.sh
 sed -i "s/{vps_no}/$vps_no/g" ~/gen.sh
+sed -i "s/{prefix}/$prefix/g" ~/gen.sh
 
 # 2. copy: gen_update_date -> ~/gen_update_date
 cp -rf gen_update_date ~/bb/gen_update_date
