@@ -1,6 +1,7 @@
  const axios = require('axios');
 
 const id = process.argv.slice(2);
+const prefix = process.argv.slice(3);
 main();
 
 async function main() {
@@ -10,7 +11,9 @@ async function main() {
 
 async function updateDate() {
   try {
-    const response = await axios.get(`http://121.41.118.162:9872/gen/updateDate/42c25d0c9c18/${id}`);
+
+    const port = (prefix == "chj") ? 9872 : 9873
+    const response = await axios.get(`http://121.41.118.162:${port}/gen/updateDate/42c25d0c9c18/${id}`);
     console.log(`${getTime()}, 响应数据: ${response.data}`);
   } catch (e) {
     console.error(`${getTime()}, 请求失败:', ${e.message}`);
