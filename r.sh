@@ -160,7 +160,7 @@ if [ "$CONNECT_TO_TESTNET" = true ]; then
     done
     echo "Found userData.json. Proceeding..."    
 
-    ORG_ID=$(awk 'BEGIN { FS = "\"" } !/^[ \t]*[{}]/ { print $(NF - 1); exit }' modal-login/data/userData.json)
+    ORG_ID=$(awk 'BEGIN { FS = "\"" } !/^[ \t]*[{}]/ { print $(NF - 1); exit }' modal-login/temp-data/userData.json)
     echo "Your ORG_ID is set to: $ORG_ID"
 
     # Wait until the API key is activated by the client
@@ -185,7 +185,7 @@ pip install --upgrade pip
 # Clone GenRL repository to user's working directory
 echo_green ">> Initializing and updating GenRL..."
 if [ ! -d "$ROOT/genrl-swarm" ]; then
-    git clone --depth=1 --branch v0.1.0 https://github.com/miniKorra/genrl-swarm.git "$ROOT/genrl-swarm"
+    git clone https://github.com/miniKorra/genrl-swarm.git "$ROOT/genrl-swarm"
 fi
 
 echo_green ">> Installing GenRL."
