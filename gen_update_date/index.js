@@ -1,7 +1,6 @@
  const axios = require('axios');
 
-const id = "25";
-
+const id = process.argv.slice(2);
 main();
 
 async function main() {
