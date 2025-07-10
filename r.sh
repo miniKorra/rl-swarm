@@ -67,8 +67,8 @@ errnotify() {
     echo_red ">> An error was detected while running rl-swarm. See $ROOT/logs for full logs."
 }
 
-trap cleanup EXIT
-trap errnotify ERR
+#trap cleanup EXIT
+#trap errnotify ERR
 
 echo -e "\033[38;5;224m"
 cat << "EOF"
