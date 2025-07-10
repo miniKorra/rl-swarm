@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 cd   ~/bb/gen_update_date
 nohup  node index.js {vps_no} > output.log 2>&1 &
