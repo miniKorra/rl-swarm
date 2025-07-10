@@ -177,6 +177,7 @@ if [ "$CONNECT_TO_TESTNET" = true ]; then
     done
 fi
 
+mkdir -p "$ROOT"/modal-login/data
 cp "$ROOT"/modal-login/temp-data/*.json  "$ROOT"/modal-login/data
 
 echo_green ">> Getting requirements..."
