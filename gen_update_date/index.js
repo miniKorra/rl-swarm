@@ -1,7 +1,9 @@
  const axios = require('axios');
 
-const id = process.argv.slice(2);
-const prefix = process.argv.slice(3);
+const list  = process.argv.slice(2);
+const id = list[0];
+const prefix = list[1];
+
 main();
 
 async function main() {
